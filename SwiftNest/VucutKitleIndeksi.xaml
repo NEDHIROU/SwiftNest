@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SwiftNest.VucutKitleIndeksi"
+             Title="Vücut Kitle İndeksi">
+
+    <ScrollView BackgroundColor="#F5F5F5">
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="Boy (cm)" FontSize="18" TextColor="#6200EE" />
+            <Entry x:Name="HeightEntry" Keyboard="Numeric" Placeholder="Boyunuzu giriniz" TextChanged="OnHeightEntryChanged" />
+
+            <Slider x:Name="HeightSlider" Minimum="50" Maximum="250" ValueChanged="OnHeightSliderChanged" />
+
+            <Label Text="Ağırlık (kg)" FontSize="18" TextColor="#6200EE" />
+            <Entry x:Name="WeightEntry" Keyboard="Numeric" Placeholder="Ağırlığınızı giriniz" TextChanged="OnWeightEntryChanged" />
+
+            <Slider x:Name="WeightSlider" Minimum="20" Maximum="200" ValueChanged="OnWeightSliderChanged" />
+
+            <Button Text="Hesapla" BackgroundColor="#6200EE" TextColor="White" Clicked="OnCalculateButtonClicked" />
+
+            <Label x:Name="BMIResultLabel" FontSize="18" TextColor="Black" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
